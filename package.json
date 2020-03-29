@@ -1,0 +1,40 @@
+{
+  "name": "react-biolaplate",
+  "version": "1.0.0",
+  "description": "a react program with webpack, react, react-router, ts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
+  },
+  "author": "shelly",
+  "license": "ISC",
+  "dependencies": {
+    "enzyme": "^3.11.0",
+    "jest": "^25.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-act": "^1.8.0",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.0.0",
+    "html-webpack-plugin": "^4.0.1",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "style-loader": "^1.1.3",
+    "url-loader": "^4.0.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
