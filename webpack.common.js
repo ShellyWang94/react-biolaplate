@@ -2,10 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
-    entry: './src/index.js',
-    output: {
-        filename: 'main.[hashContent].js',
-        path: path.resolve(__dirname, 'dist')
+    entry: {
+        main: './src/index.js',
+        vendorcode: './src/vendor.js'
     },
     module: {
         rules: [{
@@ -18,14 +17,10 @@ module.exports = {
                 }
             }
         }, {
-            test: /\.less$/,
-            exclude: /node_modules/,
-            use: ['style-loader', 'css-loader', 'less-loader']
-        }, {
             test: /\.html$/,
             use: ['html-loader']
         }, {
-            test: /\.(svg|jpg|png|gif)/,
+            test: /\.(svg|jpg|png|gif|jpeg)/,
             use: [{
             //     loader: 'file-loader',
             //     options: {
@@ -35,12 +30,15 @@ module.exports = {
             // }, {
                 loader: 'url-loader',
                 options: {
-                    limit: 8194
+                    limit: 8194,
+                    name: '[name].[ext]',
+                    outputPath: 'images/'
                 }
             }]
         }]
     },
     plugins: [new HtmlWebpackPlugin({
-        template: './src/index.html'
+        template: './src/index.html',
+        minify: false
     })]
 }
