@@ -1,7 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// extract css from bundlejs
+// extract css from bundlejs，not recommond for webpack v4
 // const ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 // extract css from bundles
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
